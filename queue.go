@@ -91,6 +91,10 @@ func (q *Queue) Clear() {
   q.tail = 0
 }
 
+func (q *Queue) Length() int {
+  return q.count
+}
+
 // Pop removes and returns a node from the queue in first to last order.
 func (q *Queue) Pop() *Node {
 	q.mu.Lock()
